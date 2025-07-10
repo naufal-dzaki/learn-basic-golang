@@ -17,4 +17,8 @@ import (
 func main() {
 	result := helper.SayHello("Naufal")
 	fmt.Println(result)
+
+	// fmt.Println(helper.version) // not allowed: version is unexported variable
+	// fmt.Println(helper.sayGoodBye("Naufal")) // not allowed: sayGoodBye is unexported function
+	fmt.Println(helper.Application)
 }

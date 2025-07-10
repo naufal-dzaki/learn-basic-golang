@@ -8,6 +8,21 @@ What is a Package in Go?
 - The main package is special — it defines the entry point of the program (the main() function).
 */
 
-func SayHello(name string) string {
+/*
+What is an Access Modifier in Go?
+- In Go, access control (also called access modifier) is determined by the first letter of an identifier.
+- Go uses capitalization to control access level — not special keywords like in other languages.
+- Capitalized Identifiers → Exported (Public/Can be accessed from other packages.)
+- Lowercase Identifiers → Unexported (Private/Only accessible within the same package.)
+*/
+
+var version = "1.0.0"      // unexported — lowercase, cannot be accessed from outside
+var Application = "golang" // exported — capitalized, can be accessed from other packages
+
+func sayGoodBye(name string) string { // unexported
+	return "Good bye " + name
+}
+
+func SayHello(name string) string { // exported
 	return "Hello " + name
 }
